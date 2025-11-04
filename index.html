@@ -3,29 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>US GURI DAs UNOESC</title>
-    <link rel="stylesheet" href="style.css">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>US GURI DA UNOESC</title>
+    <link rel="stylesheet" href="style.css?v=1727881234"> <!-- Quebra cache do CSS -->
+	<link rel="icon" type="image/png" href="img/logo.png">
 </head>
 <body>
 
-    <!-- Cabeçalho -->
+    <!-- Barra superior: Tudo à esquerda, nome como botão com logo e hover azul -->
     <header>
-        <h1>US GURI DA UNOESC</h1>
-        <p class="subtitle">O grupo mais brabo da universidade</p>
+        <a href="#" onclick="showPage('intro')" class="group-link">
+            <img src="img/logo.png?v=1727881234" alt="Logo US Guri da UNOESC" class="logo-header">
+            US GURI DA UNOESC
+        </a>
+        <a href="#" onclick="showPage('adms')">Administradores</a>
+        <a href="#" onclick="showPage('founders')">Fundadores</a>
+        <a href="#" onclick="showPage('camiseta')">Camiseta</a>
     </header>
 
-    <!-- Navegação -->
-    <nav>
-        <a href="#" onclick="showPage('intro')">Intro</a>
-        <a href="#" onclick="showPage('adms')">Administradores</a>
-		<a href="#" onclick="showPage('founders')">Fundadores</a>
-		<a href="#" onclick="showPage('camiseta')">Camiseta</a>
-    </nav>
-
-    <!-- Página Intro -->
+    <!-- Página Intro (default) -->
     <section id="intro" class="page active">
         <div class="intro-content">
-            <img src="img/intro-foto.jpeg" alt="US Guri da UNOESC - Grupo na quadra" class="intro-image">
+            <img src="img/intro-foto.jpeg?v=1727881234" alt="US Guri da UNOESC - Grupo na quadra" class="intro-image">
             <div class="about-box">
                 <h2>Quem somos?</h2>
                 <p>Somos <strong>US GURI DA UNOESC</strong> — um grupo de amigos com muita criatividade, bom humor e umas ideias meio malucas. A prova tá aí na foto.</p>
@@ -34,41 +35,41 @@
         </div>
     </section>
 
-    <!-- Página adms -->
+    <!-- Página Administradores -->
     <section id="adms" class="page">
         <div class="adms-content">
             <h2>Administradores</h2>
-            <h3>Gabriel • Pedro • Thalis</h3>
-            <img src="img/adms.jpeg" alt="Borracha, Kevin Gil e Kaio Gil" class="amds-image">
+            <h3>Thalis • Gabriel • Pedro</h3>
+            <img src="img/adms.jpeg?v=1727881234" alt="Thalis, Gabriel e Pedro" class="adms-image">
             <p>Os donos do rolê. Gabriel planeja, Pedro executa, Thalis bagunça com estilo. Tudo funciona — e ainda rola meme às 3h.</p>
             <p class="quote">“Se não for pra rir, não é com a gente!”</p>
         </div>
     </section>
 
-	<!-- Página Fundadores -->
-	<section id="founders" class="page">
-    	<div class="founders-content">
-        	<h2>Fundadores</h2>
-        	<h3>Kevin Gil • Kaio Gil</h3>
-        	<img src="img/fundadores.jpeg" alt="Borracha, Kevin Gil e Kaio Gil" class="founders-image">
-        	<p>Os Irmãos Borracha! Kevin e Kaio (irmãos de sangue e alma) criaram o US Guri do zero. Ideias doidas, risada garantida e uma amizade que ninguém explica.</p>
-        	<p class="quote">“A gente começou isso tudo... é us guri!”</p>
-    	</div>
-	</section>
-		
-	<!-- Página Camiseta -->
-	<section id="camiseta" class="page">
-    	<div class="camiseta-content">
-        	<h2>A Camiseta Oficial</h2>
-        	<h3>US GURI DA UNOESC</h3>
-        	<img src="img/camiseta.png" alt="Camiseta do US Guri da UNOESC" class="camiseta-image">
-        	<p>Preta, verde neon, estampa **braba** e cheia de atitude. Só usa quem é **guri de verdade**.</p>
-        	<p>Feita pra quem vive a zoeira, curte a resenha e representa o rolê com orgulho.</p>
-        	<p class="quote">“Camiseta no corpo, guri na veia.”</p>
-    	</div>
-	</section>
-    
-    <!-- Rodapé -->
+    <!-- Página Fundadores -->
+    <section id="founders" class="page">
+        <div class="founders-content">
+            <h2>Fundadores</h2>
+            <h3>Kevin Gil • Kaio Gil</h3>
+            <img src="img/fundadores.jpeg?v=1727881234" alt="Borracha, Kevin Gil e Kaio Gil" class="founders-image">
+            <p>Os **pais da zoeira**! Kevin e Kaio (irmãos de sangue) + Borracha (irmão de alma) criaram o US Guri do zero. Ideias doidas, risada garantida e uma amizade que ninguém explica.</p>
+            <p class="quote">“A gente começou isso tudo... e não vai parar!”</p>
+        </div>
+    </section>
+
+    <!-- Página Camiseta -->
+    <section id="camiseta" class="page">
+        <div class="camiseta-content">
+            <h2>A Camiseta Oficial</h2>
+            <h3>US GURI DA UNOESC</h3>
+            <img src="img/camiseta.png" alt="Camiseta do US Guri da UNOESC" class="camiseta-image">
+            <p>Preta, verde neon, estampa **braba** e cheia de atitude. Só usa quem é **guri de verdade**.</p>
+            <p>Feita pra quem vive a zoeira, curte a resenha e representa o rolê com orgulho.</p>
+            <p class="quote">“Camiseta no corpo, guri na veia.”</p>
+        </div>
+    </section>
+
+    <!-- Rodapé (centralizado) -->
     <footer>
         <p>&copy; 2025 US Guri da UNOESC. Vida curta, zoeira eterna!</p>
     </footer>
@@ -79,7 +80,19 @@
                 page.classList.remove('active');
             });
             document.getElementById(pageId).classList.add('active');
+            window.scrollTo({ top: 0, behavior: 'smooth' }); // Corrige scroll pro topo
         }
+        // Limpa cache geral ao carregar
+        window.addEventListener('load', () => {
+            if ('caches' in window) {
+                caches.keys().then(keys => keys.forEach(key => caches.delete(key)));
+            }
+            // Força reload de imagens com timestamp (quebra cache)
+            document.querySelectorAll('img').forEach(img => {
+                const baseSrc = img.src.split('?')[0]; // Remove timestamp velho
+                img.src = baseSrc + '?v=' + Date.now(); // Adiciona novo timestamp
+            });
+        });
     </script>
 
 </body>
