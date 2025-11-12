@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>US GURI DA UNOESC</title>
+    <link rel="stylesheet" href="style.css?v=1727881234">
+	<link rel="icon" type="image/png" href="img/logo.png">
+</head>
+<body>
+
+    <!-- Barra superior -->
+    <header>
+        <a href="#" onclick="showPage('intro')" class="group-link">
+            <img src="img/logo.png?v=1727881234" alt="Logo US Guri da UNOESC" class="logo-header">
+            US GURI DA UNOESC
+        </a>
+        <a href="#" onclick="showPage('adms')">Administradores</a>
+        <a href="#" onclick="showPage('founders')">Fundadores</a>
+        <a href="#" onclick="showPage('camiseta')">Camiseta</a>
+    </header>
+
+    <!-- Página Intro (default) -->
+    <section id="intro" class="page active">
+        <div class="intro-content">
+            <img src="img/intro-foto.jpeg?v=1727881234" alt="US Guri da UNOESC - Grupo na quadra" class="intro-image">
+            <div class="about-box">
+                <h2>Quem somos?</h2>
+                <p>Somos <strong>US GURI DA UNOESC</strong> — um grupo de amigos com muita criatividade, bom humor e umas ideias meio malucas. A prova tá aí na foto.</p>
+                <p>A vida é curta demais pra não rir — e nós levamos isso a sério!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Página Administradores -->
+    <section id="adms" class="page">
+        <div class="adms-content">
+            <h2>Administradores</h2>
+            <h3>Thalis • Gabriel • Pedro</h3>
+            <img src="img/adms.jpeg?v=1727881234" alt="Thalis, Gabriel e Pedro" class="adms-image">
+            <p>Os donos do rolê. Gabriel planeja, Pedro executa, Thalis bagunça com estilo. Tudo funciona — e ainda rola meme às 3h.</p>
+            <p class="quote">"Se não for pra rir, não é com a gente!"</p>
+        </div>
+    </section>
+
+    <!-- Página Fundadores -->
+    <section id="founders" class="page">
+        <div class="founders-content">
+            <h2>Fundadores</h2>
+            <h3>Kevin Gil • Kaio Gil</h3>
+            <img src="img/fundadores.jpeg?v=1727881234" alt="Borracha, Kevin Gil e Kaio Gil" class="founders-image">
+            <p>Os **pais da zoeira**! Kevin e Kaio (irmãos de sangue) + Borracha (irmão de alma) criaram o US Guri do zero. Ideias doidas, risada garantida e uma amizade que ninguém explica.</p>
+            <p class="quote">"A gente começou isso tudo... e não vai parar!"</p>
+        </div>
+    </section>
+
+    <!-- Página Camiseta -->
+    <section id="camiseta" class="page">
+        <div class="camiseta-content">
+            <h2>A Camiseta Oficial</h2>
+            <h3>US GURI DA UNOESC</h3>
+            
+            <p>Preta, verde neon, estampa **braba** e cheia de atitude. Só usa quem é **guri de verdade**.</p>
+            <p>Feita pra quem vive a zoeira, curte a resenha e representa o rolê com orgulho.</p>
+            <p class="quote">"Camiseta no corpo, guri na veia."</p>
+            
+            <!-- Galeria: Projeto + Pronta -->
+            <div class="galeria-camisetas">
+                <div class="camiseta-section">
+                    <h4>🎨 Projeto da Estampa</h4>
+                    <img src="img/camiseta.png" alt="Projeto da Camiseta" class="camiseta-image">
+                </div>
+
+                <div class="camiseta-section">
+                    <h4>👕 Camiseta Pronta</h4>
+                    <img src="img/camiseta-pronta.png" alt="Camiseta Pronta" class="camiseta-image">
+                    <p class="img-note">*Excelenti</p>
+                </div>
+            </div>
+
+            <!-- PERSONALIZE SUA CAMISETA - INTERATIVO -->
+            <div class="personalizacao-box">
+                <h3>🔥 Personalize sua Camiseta!</h3>
+                <p style="margin-bottom: 30px;">Digite seu nome e número para ver como vai ficar</p>
+                
+                <div class="editor-container">
+                    <!-- Caixinha de Personalização -->
+                    <div class="personalizacao-inputs">
+                        <div class="form-group">
+                            <label for="nomePersonalizado">📝 Seu Nome:</label>
+                            <input type="text" id="nomePersonalizado" maxlength="15" placeholder="Digite seu nome" oninput="atualizarCamiseta()">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="numeroPersonalizado">🔢 Seu Número:</label>
+                            <input type="number" id="numeroPersonalizado" maxlength="3" placeholder="Ex: 10" oninput="atualizarCamiseta()">
+                        </div>
+
+                        <p class="dica">💡 Máximo: 15 caracteres no nome, 3 no número. Veja a zoeira atualizar na img!</p>
+                    </div>
+
+                    <!-- Preview da Camiseta -->
+                    <div class="camiseta-preview">
+                        <div class="camiseta-mockup">
+                            <img src="img/camiseta-base.png" alt="Base da Camiseta" class="estampa-base"> <!-- Img limpa sem texto -->
+                            <div class="texto-personalizado">
+                                <div id="numero-peito" class="numero-peito-preview">00</div> <!-- Número pequeno no peito esquerda -->
+                                <div id="nome-costas" class="nome-costas-preview">SEU NOME</div> <!-- Nome em cima na costas direita -->
+                                <div id="numero-costas" class="numero-costas-preview">00</div> <!-- Número grande abaixo na costas -->
+                            </div>
+                        </div>
+                        <p class="preview-label">👆 Preview Brabo da Zoeira!</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Formulário de Pedido - 2º Lote -->
+            <div class="pedido-box">
+                <h3>🚀 Garanta a sua - 2º Lote!</h3>
+                <form id="pedidoForm">
+                    <div class="form-group">
+                        <label for="nomeCompleto">Nome Completo:</label>
+                        <input type="text" id="nomeCompleto" name="nomeCompleto" required placeholder="Digite seu nome completo">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="whatsapp">WhatsApp:</label>
+                        <input type="tel" id="whatsapp" name="whatsapp" required placeholder="(00) 00000-0000">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tamanho">Tamanho:</label>
+                        <select id="tamanho" name="tamanho" required>
+                            <option value="">Selecione o tamanho</option>
+                            <option value="P">P</option>
+                            <option value="M">M</option>
+                            <option value="G">G</option>
+                            <option value="GG">GG</option>
+                            <option value="XG">XG</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Fazer Pedido pelo WhatsApp 💬</button>
+                </form>
+                <p id="mensagemSucesso" class="mensagem-sucesso"></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2025 US Guri da UNOESC. Vida curta, zoeira eterna!</p>
+    </footer>
+
+    <script>
+        function showPage(pageId) {
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.remove('active');
+            });
+            document.getElementById(pageId).classList.add('active');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Atualiza preview da camiseta em tempo real
+        function atualizarCamiseta() {
+            const nome = document.getElementById('nomePersonalizado').value.toUpperCase() || 'SEU NOME';
+            const numero = document.getElementById('numeroPersonalizado').value || '00';
+            
+            document.getElementById('numero-peito').innerText = numero; // Pequeno no peito
+            document.getElementById('nome-costas').innerText = nome; // Nome em cima costas
+            document.getElementById('numero-costas').innerText = numero; // Grande abaixo
+        }
+
+        // Chama no load pra default aparecer
+        window.addEventListener('load', atualizarCamiseta);
+
+        // Formulário de Pedido
+        document.getElementById('pedidoForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const nomeCompleto = document.getElementById('nomeCompleto').value;
+            const whatsapp = document.getElementById('whatsapp').value;
+            const tamanho = document.getElementById('tamanho').value;
+            const nomePersonalizado = document.getElementById('nomePersonalizado').value.toUpperCase() || 'SEM PERSONALIZAÇÃO';
+            const numeroPersonalizado = document.getElementById('numeroPersonalizado').value || 'SEM NÚMERO';
+            
+            // Monta mensagem para WhatsApp
+            const mensagem = `🔥 *PEDIDO 2º LOTE - US GURI DA UNOESC* 🔥\n\n` +
+                           `👤 *Nome:* ${nomeCompleto}\n` +
+                           `📱 *Contato:* ${whatsapp}\n` +
+                           `👕 *Tamanho:* ${tamanho}\n\n` +
+                           `✨ *PERSONALIZAÇÃO:*\n` +
+                           `📝 Nome na camisa: ${nomePersonalizado}\n` +
+                           `🔢 Número na camisa: ${numeroPersonalizado}`;
+            
+            // Número do WhatsApp do responsável (COLOQUE SEU NÚMERO AQUI)
+            const numeroWhatsApp = '5549991348038'; // Formato: 55 + DDD + número
+            const urlWhatsApp = `https://wa.me/${5549991348038}?text=${encodeURIComponent(nomePersonalizado, numeroPersonalizado, tamanho)}`;
+            
+            // Abre WhatsApp
+            window.open(urlWhatsApp, '_blank');
+            
+            // Mensagem de sucesso
+            document.getElementById('mensagemSucesso').innerHTML = 
+                '✅ Pedido enviado! Você será redirecionado para o WhatsApp.';
+            
+            // Limpa formulário
+            document.getElementById('pedidoForm').reset();
+            
+            setTimeout(() => {
+                document.getElementById('mensagemSucesso').innerHTML = '';
+            }, 5000);
+        });
+
+        // Cache refresh
+        window.addEventListener('load', () => {
+            if ('caches' in window) {
+                caches.keys().then(keys => keys.forEach(key => caches.delete(key)));
+            }
+            document.querySelectorAll('img').forEach(img => {
+                const baseSrc = img.src.split('?')[0];
+                img.src = baseSrc + '?v=' + Date.now();
+            });
+        });
+    </script>
+
+</body>
+</html>
