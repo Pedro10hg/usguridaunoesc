@@ -1130,6 +1130,59 @@ nav a:hover {
     font-style: italic;
 }
 
+/* --- CONTROLES MOBILE (D-PAD) --- */
+
+.mobile-controls {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.dpad-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.dpad-middle-row {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.dpad-btn {
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, var(--primary), #1e8449);
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.15s ease;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+}
+
+.dpad-btn:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, #1e8449, var(--primary));
+}
+
+.dpad-center {
+    width: 60px;
+    height: 60px;
+    background: rgba(39, 174, 96, 0.2);
+    border-radius: 12px;
+    border: 2px solid var(--primary);
+}
+
 /* ============================================================================
    PÁGINA: LOGIN / CADASTRO
    ============================================================================ */

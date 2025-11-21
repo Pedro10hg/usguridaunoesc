@@ -1497,6 +1497,38 @@ function handleSnakeTouchEnd(e) {
     }
 }
 
+// --- Controle por Botões (D-pad Mobile) ---
+function snakeChangeDirection(direction) {
+    if (!snakeRunning) return;
+
+    switch (direction) {
+        case 'up':
+            if (velocityY !== 1) {
+                velocityX = 0;
+                velocityY = -1;
+            }
+            break;
+        case 'down':
+            if (velocityY !== -1) {
+                velocityX = 0;
+                velocityY = 1;
+            }
+            break;
+        case 'left':
+            if (velocityX !== 1) {
+                velocityX = -1;
+                velocityY = 0;
+            }
+            break;
+        case 'right':
+            if (velocityX !== -1) {
+                velocityX = 1;
+                velocityY = 0;
+            }
+            break;
+    }
+}
+
 // --- Loop Principal ---
 function updateSnakeGame() {
     if (!snakeRunning) return;
