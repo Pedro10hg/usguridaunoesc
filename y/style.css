@@ -76,9 +76,9 @@ header {
 
 .header-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
 }
 
 /* --- LOGO E TÍTULO --- */
@@ -116,7 +116,6 @@ header {
 /* --- NAVEGAÇÃO --- */
 
 nav {
-    flex: 1;
     display: flex;
     justify-content: flex-start;
 }
@@ -200,6 +199,7 @@ nav a:hover {
     display: flex;
     align-items: center;
     gap: 12px;
+    margin-left: auto;
 }
 
 .username-display {
@@ -968,6 +968,21 @@ nav a:hover {
     display: block;
     margin: 0 auto;
     border: 2px solid var(--gray);
+    cursor: pointer;
+    touch-action: none;
+    user-select: none;
+}
+
+#snakeCanvas {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    aspect-ratio: 1;
+    background: #1a1a1a;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+    border: 2px solid var(--primary);
     cursor: pointer;
     touch-action: none;
     user-select: none;
